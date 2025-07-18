@@ -162,10 +162,47 @@ nav {
     background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('hero-bg.jpg');
     background-size: cover;
     background-position: center;
+     background-repeat: no-repeat;
     height: 100vh;
     display: flex;
     align-items: center;
     padding-top: 80px;
+}
+
+
+/* Content Animation */
+.hero-content > * {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.hero h1 {
+    animation: slideUp 0.8s ease-out forwards 0.2s;
+}
+
+.hero p {
+    animation: slideUp 0.8s ease-out forwards 0.4s;
+}
+
+.whatsapp-cta {
+    animation: slideUp 0.8s ease-out forwards 0.6s;
+}
+
+.fixed-whatsapp {
+    animation: slideUp 0.8s ease-out forwards 0.6s;
+}
+
+/* Keyframes */
+@keyframes subtleZoom {
+    0% { background-size: 100%; }
+    100% { background-size: 105%; }
+}
+
+@keyframes slideUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .hero-content {
@@ -474,7 +511,7 @@ body.dark-mode {
 }
 
 .dark-mode footer {
-    background-color: #1a1a1a;
+    background-color: #1d1c1c;
 }
 
 .dark-mode .copyright {
